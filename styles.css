@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh
+}
+
+.mainDiv {
+    height: 600px;
+    width: 600px;
+    border: 0.8px solid black;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+    padding: -0.1em;
+    border: 0.5px solid gray;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#btn1, #btn2, #btn3 {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #99797E;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.30em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Press Start 2P', cursive;
+    font-weight:300;
+    color:#FFCBD2;
+    text-align:center;
+    transition: all 0.5s;
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover {
+    color:#000000;
+    background-color:#FFCBD2;
+    box-shadow: 0 0 5px #FFCBD2;
+    border-color: #FFCBD2;
+}
