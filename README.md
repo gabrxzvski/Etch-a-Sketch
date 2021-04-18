@@ -1,0 +1,1 @@
+This is a Etch-a-Sketch game project for The Odin Project, for now i just added the game logics and the basic structure for both html and css files.
