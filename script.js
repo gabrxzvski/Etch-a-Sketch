@@ -42,7 +42,7 @@ function setDefaultGrid() {
 
 
 function test() {
-    let x = document.getElementById('gridSize').value;
+    let x = Math.round(document.getElementById('gridSize').value);
     if(x >= 1 && x <= 64) {
         clearGrid(x, x);
         grid(x, x);
