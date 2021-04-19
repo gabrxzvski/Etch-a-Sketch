@@ -3,7 +3,6 @@ const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 
-
 const buttons = document.querySelector('.buttons');
 const allBtns = buttons.querySelectorAll('a');
 allBtns.forEach(element => {
@@ -28,13 +27,14 @@ allBtns.forEach(element => {
         } if (element.id === 'btn3') {
             const gridItem = document.getElementsByClassName('grid-item');
             for (let i = 0; i < gridItem.length; i++) {
-                gridItem[i].style.backgroundColor='white';
+                gridItem[i].style.backgroundColor='transparent';
             }
         }
     });
 });
 
 window.addEventListener("load", setDefaultGrid);
+window.addEventListener('keydown', function (e) { if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) { if (e.target.nodeName == 'INPUT' && e.target.type == 'number') { e.preventDefault(); return false; } } }, true);
 
 function setDefaultGrid() {
     grid(16, 16);
@@ -43,8 +43,13 @@ function setDefaultGrid() {
 
 function test() {
     let x = document.getElementById('gridSize').value;
-    clearGrid(x, x);
-    grid(x, x);
+    if(x >= 1 && x <= 64) {
+        clearGrid(x, x);
+        grid(x, x);
+    } else {
+        alert("Please enter a number between 1-64")
+        return false;
+    }
 }
 
 function grid(rows, cols) {
