@@ -3,13 +3,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 97vh
+    min-height: 97vh;
+    background-image: url("./images/background-pink.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .mainDiv {
     height: 600px;
     width: 600px;
-    border: 0.8px solid black;
+    border: 2px solid #FFCBD2;
+    box-shadow: 0 0 5px #FFCBD2;
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -17,7 +22,8 @@ body {
 
 .grid-item {
     padding: -0.1em;
-    border: 0.5px solid gray;
+    border: 0.5px solid #99797E;
+    box-shadow: 0 0 5px #99797E;
     text-align: center;
 }
 
@@ -27,6 +33,14 @@ body {
     height: 100px;
     justify-content: space-around;
     align-items: flex-end;
+}
+
+.setSizeForm {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #btn1, #btn2, #btn3 {
@@ -49,4 +63,57 @@ body {
     background-color:#FFCBD2;
     box-shadow: 0 0 5px #FFCBD2;
     border-color: #FFCBD2;
+}
+
+#submits {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #99797E;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.30em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Press Start 2P', cursive;
+    font-weight:300;
+    color:#FFCBD2;
+    text-align:center;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+
+#submits:hover {
+    color:#000000;
+    background-color:#FFCBD2;
+    box-shadow: 0 0 5px #FFCBD2;
+    border-color: #FFCBD2;
+}
+
+#testlabel {
+    font-family: 'Press Start 2P', cursive;
+    color:#FFCBD2;
+    font-size: 14px;
+}
+
+#gridSize {
+    height: 25px;
+    width: 45px;
+    margin-right: 45px;
+    border-radius: 4px;
+    color:#FFCBD2;
+    box-shadow: 0 0 2px #FFCBD2;
+    border:0.2em solid #99797E;
+    font-size: 14px;
+    background-color: transparent;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
